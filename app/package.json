@@ -1,0 +1,6 @@
+{
+    "scripts": {
+        "start": "node index.js",
+        "start:dev": "nodemon --inspect=0.0.0.0 index.js"
+    }
+}

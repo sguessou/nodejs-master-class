@@ -1,0 +1,82 @@
+:my-header = <<
+foo: bar
+fizz: buzz
+apples: oranges
+red: blue
+#
+
+POST http://127.0.0.1:8081/wassup
+:my-header
+Content-Header: text/plain
+This is the body we are sending
+
+#
+GET http://127.0.0.1:8081/ping
+
+#
+GET http://127.0.0.1:8081/hello
+
+#
+POST http://127.0.0.1:8081/users
+Content-Type: application/json
+
+{
+    "firstName": "Saad",
+    "lastName": "Guessous",
+    "phone": "0458951778",
+    "password": "return12345678",
+    "tosAgreement": true
+}
+
+#
+:my-header = <<
+token: jboaibo2zia712d2di5h
+#
+        
+GET http://127.0.0.1:8081/users?phone=0458951778
+:my-header
+
+#
+PUT http://127.0.0.1:8081/users
+Content-Type: application/json
+
+{
+    "firstName": "Buwakaw",
+    "lastName": "Angel Of Death",
+    "phone": "0458951777"
+}
+
+#
+# DELETE user
+DELETE http://127.0.0.1:8081/users?phone=0458951615
+
+
+# POST Tokens
+#
+POST http://127.0.0.1:8081/tokens
+Content-Type: application/json
+
+{
+    "phone": "0458951778",
+    "password": "return12345678"
+    
+}
+
+# GET Tokens
+#
+GET http://127.0.0.1:8081/tokens?id=j1ucrez4k1p38zpgi5rg
+
+# PUT Tokens
+#
+PUT http://127.0.0.1:8081/tokens
+Content-Type: application/json
+
+{
+    "id": "s4lc7i4va2n4z3nluxap",
+    "extend": true
+    
+}    
+
+# DELETE Tokens
+#
+DELETE http://127.0.0.1:8081/tokens?id=s4lc7i4va2n4z3nluxap    
