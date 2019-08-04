@@ -79,4 +79,23 @@ Content-Type: application/json
 
 # DELETE Tokens
 #
-DELETE http://127.0.0.1:8081/tokens?id=s4lc7i4va2n4z3nluxap    
+DELETE http://127.0.0.1:8081/tokens?id=s4lc7i4va2n4z3nluxap
+
+
+# POST CHECKS
+#
+:checks-header = <<
+token: nkyreg05cwpa2irmdgkv
+#
+    
+POST http://127.0.0.1:8081/checks
+:checks-header
+Content-Type: application/json
+
+{
+    "protocol": "http",
+    "url": "google.com",
+    "method": "get",
+    "successCodes": [200, 201],
+    "timeoutSeconds": 3    
+}

@@ -10,7 +10,9 @@ environments.staging = {
     'httpPort': 8081,
     'httpsPort': 8082,
     'envName': 'staging',
-    'hashingSecret': 'thisisasecret'
+    'hashingSecret': 'thisisasecret',
+    'maxChecks': 5
+    
 };
 
 // Production environment
