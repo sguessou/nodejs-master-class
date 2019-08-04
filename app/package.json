@@ -1,6 +1,9 @@
 {
-    "scripts": {
-        "start": "node index.js",
-        "start:dev": "nodemon --inspect=0.0.0.0 index.js"
-    }
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon --inspect=0.0.0.0 index.js"
+  },
+  "dependencies": {
+    "dotenv": "^8.0.0"
+  }
 }

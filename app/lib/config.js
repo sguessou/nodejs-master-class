@@ -2,6 +2,10 @@
 * Create and export configuration variables
 */
 
+// Dependencies
+const dotenv = require('dotenv');
+dotenv.config();
+
 // Container for all the environments
 const environments = {};
 
@@ -11,7 +15,12 @@ environments.staging = {
     'httpsPort': 8082,
     'envName': 'staging',
     'hashingSecret': 'thisisasecret',
-    'maxChecks': 5
+    'maxChecks': 5,
+    'twilio': {
+        'accountSid' : process.env.TWILIO_ACCOUNTSID,
+        'authToken' : process.env.TWILIO_AUTHTOKEN,
+        'fromPhone' : '+12052939482'
+    }
     
 };
 
