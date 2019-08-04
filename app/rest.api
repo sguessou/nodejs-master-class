@@ -23,7 +23,7 @@ Content-Type: application/json
 {
     "firstName": "Saad",
     "lastName": "Guessous",
-    "phone": "0458951778",
+    "phone": "458951615",
     "password": "return12345678",
     "tosAgreement": true
 }
@@ -48,7 +48,7 @@ Content-Type: application/json
 
 #
 # DELETE user
-DELETE http://127.0.0.1:8081/users?phone=0458951615
+DELETE http://127.0.0.1:8081/users?phone=0458951777
 
 
 # POST Tokens
@@ -72,7 +72,7 @@ PUT http://127.0.0.1:8081/tokens
 Content-Type: application/json
 
 {
-    "id": "s4lc7i4va2n4z3nluxap",
+    "id": "oqx2acvkunj72n48kogq",
     "extend": true
     
 }    
@@ -85,7 +85,7 @@ DELETE http://127.0.0.1:8081/tokens?id=s4lc7i4va2n4z3nluxap
 # POST CHECKS
 #
 :checks-header = <<
-token: nkyreg05cwpa2irmdgkv
+token: 2228fi3608mncvve9lbe
 #
     
 POST http://127.0.0.1:8081/checks
@@ -93,9 +93,49 @@ POST http://127.0.0.1:8081/checks
 Content-Type: application/json
 
 {
-    "protocol": "http",
-    "url": "google.com",
-    "method": "get",
+    "protocol": "https",
+    "url": "webhook.site/27bcee6c-5c40-4da1-8431-c5351aac482d",
+    "method": "post",
     "successCodes": [200, 201],
     "timeoutSeconds": 3    
 }
+
+
+# GET CHECKS
+#
+:checks-header = <<
+token: oqx2acvkunj72n48kogq
+#
+        
+GET http://127.0.0.1:8081/checks?id=oisxx21ayglhcrjd34zi
+:checks-header
+Content-Type: application/json
+
+# PUT CHECKS
+#
+:checks-header = <<
+token: dpmqot5ctb449crey9lk
+#
+    
+PUT http://127.0.0.1:8081/checks
+:checks-header
+Content-Type: application/json
+
+{
+    "id": "oisxx21ayglhcrjd34zi",
+    "protocol": "https",
+    "url": "webhook.site/27bcee6c-5c40-4da1-8431-c5351aac482d",
+    "method": "post",
+    "successCodes": [200, 201, 403],
+    "timeoutSeconds": 2    
+}
+
+# DELETE CHECKS
+#
+:checks-header = <<
+token: 2228fi3608mncvve9lbe
+#
+    
+DELETE http://127.0.0.1:8081/checks?id=hefdcmynx1boihnt467h
+:checks-header
+Content-Type: application/json
