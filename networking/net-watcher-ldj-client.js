@@ -9,6 +9,6 @@ ldjClient.on('message', message => {
     } else if (message.type === 'changed') {
         console.log(`File changed: ${new Date(message.timestamp)}`);
     } else {
-        throw Error(`Unrecognized message type: ${message.type}`);
+        throw new Error(`Unrecognized message type: ${message.type}`);
     }
 });

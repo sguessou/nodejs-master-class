@@ -4,12 +4,13 @@
   "description": "",
   "main": "net-watcher-json-client.js",
   "scripts": {
-    "test": "mocha"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "jest": "^24.8.0",
     "mocha": "3.4.2"
   }
 }
