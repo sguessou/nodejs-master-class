@@ -1,3 +1,6 @@
 app/.data
 .env
 node_modules/
+**/.tern-port
+.tern-port
+    
